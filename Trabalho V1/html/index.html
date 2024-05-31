@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBase</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">BookBase</div>
+            <nav>
+                <ul>
+                    <li><a href="../html/index.html" class="active"><i class='bx bx-home-heart' id="icon"></i> Discover</a></li>
+                    <li><a href="../php/livro.php"><i class='bx bxs-book-bookmark' ></i> Books</a></li>
+                    <li><a href="#"><i class='bx bxs-edit'></i> Author</a></li>
+                    <li><a href="#"><i class='bx bx-category'></i> Category</a></li>
+                    <li><a href="#"><i class='bx bx-library'></i> My Library</a></li>
+                    <li><a href="#"><i class='bx bx-download'></i> Download</a></li>
+                    <li><a href="#"><i class='bx bx-headphone'></i> Audio Books</a></li>
+                    <li><a href="#"><i class='bx bx-heart'></i> Favourite</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-bottom">
+                <ul>
+                    <li><a href="#"><i class='bx bx-cog sidebar-icon' ></i>Settings</a></li>
+                    <li><a href="#"><i class='bx bx-support sidebar-icon' ></i>Support</a></li>
+                    <li><a href="#"><i class='bx bx-log-in sidebar-icon' ></i>Logout</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <header>
+                <div class="input-box">
+                    <i class='bx bx-search'></i>
+                    <input type="text" id="input_search" placeholder="Search your favourite books">
+                </div>  
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar">
+                    <span>Your Name</span>
+                </div>
+            </header>
+            <section class="recommended">
+                <h2>Recommended <a href="#" class="see-all">See All ></a></h2>
+                <div class="book-list">
+                    <div class="book">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/71wdbq8NbFL._AC_UF1000,1000_QL80_.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/91LzeKCuAGL._AC_UF1000,1000_QL80_.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/618iEKbcBDL._AC_UF1000,1000_QL80_.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                </div>
+            </section>
+            <section class="categories">
+                <h2>Categories</h2>
+                <div class="category-list">
+                    <button class="category active">All</button>
+                    <button class="category">Sci-Fi</button>
+                    <button class="category">Fantasy</button>
+                    <button class="category">Drama</button>
+                    <button class="category">Business</button>
+                    <button class="category">Education</button>
+                    <button class="category">Geography</button>
+                </div>
+                <div class="book-list">
+                    <div class="book catg">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book catg" >
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book catg">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book catg">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book catg">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book catg">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                    <div class="book catg">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="The Psychology of Money">
+                        <p>The Psychology of Money</p>
+                        <p class="author">Morgan Housel</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+       
+        <aside class="book-details">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg" alt="Company of One">
+            <h2>Company of One</h2>
+            <p>Paul Jarvis</p>
+            <p class="rating">
+                <span class="stars"></span>
+                <span class="rating-value">3</span>
+            </p>
+            <p class="details">
+                <div class="detail-item">
+                    320
+                    <span>Pages</span>
+                </div>
+                <div class="detail-item">
+                    643
+                    <span>Ratings</span>
+                </div>
+                <div class="detail-item">
+                    110
+                    <span>Reviews</span>
+                </div>
+            </p>
+            <p class="description">Company of One offers a refreshingly original business strategy that’s focused on a commitment to being better instead of bigger. Why? Because staying small provides an owner with the freedom to pursue more meaningful pleasures in life—and avoid the headaches that...</p>
+            <button class="read-now">Read Now <i class='bx bx-book-reader'></i></button>
+        </aside>
+    </div>
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    const ratingElement = document.querySelector(".rating-value");
+    const ratingValue = parseFloat(ratingElement.textContent);
+    const starsElement = document.querySelector(".stars");
+
+    const totalStars = 5;
+    const fullStars = Math.floor(ratingValue);
+    const hasHalfStar = ratingValue % 1 !== 0;
+    const emptyStars = totalStars - fullStars - (hasHalfStar ? 1 : 0);
+
+    starsElement.innerHTML = '';
+
+    // Add full stars
+    for (let i = 0; i < fullStars; i++) {
+        starsElement.innerHTML += "<i class='bx bxs-star' style='color: gold;'></i>";
+    }
+
+    // Add half star if applicable
+    if (hasHalfStar) {
+        starsElement.innerHTML += "<i class='bx bxs-star-half' style='color: gold;'></i>";
+    }
+
+    // Add empty stars
+    for (let i = 0; i < emptyStars; i++) {
+        starsElement.innerHTML += "<i class='bx bxs-star' style='color: lightgray;'></i>";
+    }
+});
+
+    </script>
+</body>
+</html>

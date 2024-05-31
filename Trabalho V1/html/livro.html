@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBase</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/autor.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">BookBase</div>
+            <nav>
+                <ul>
+                    <li><a href="../html/index.html" class="active"><i class='bx bx-home-heart' id="icon"></i> Discover</a></li>
+                    <li><a href="../php/livro.php"><i class='bx bxs-book-bookmark'></i> Books</a></li>
+                    <li><a href="#"><i class='bx bxs-edit'></i> Author</a></li>
+                    <li><a href="#"><i class='bx bx-category'></i> Category</a></li>
+                    <li><a href="#"><i class='bx bx-library'></i> My Library</a></li>
+                    <li><a href="#"><i class='bx bx-download'></i> Download</a></li>
+                    <li><a href="#"><i class='bx bx-headphone'></i> Audio Books</a></li>
+                    <li><a href="#"><i class='bx bx-heart'></i> Favourite</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-bottom">
+                <ul>
+                    <li><a href="#"><i class='bx bx-cog sidebar-icon'></i>Settings</a></li>
+                    <li><a href="#"><i class='bx bx-support sidebar-icon'></i>Support</a></li>
+                    <li><a href="#"><i class='bx bx-log-in sidebar-icon'></i>Logout</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section class="form-section">
+                <h2>Register a New Book</h2>
+                <form id="book-form" class="book-form" action="../php/livro.php" method="POST">
+                    <div class="form-group">
+                        <label for="title">Book Title:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author:</label>
+                       <select name="" id=""></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <input type="text" id="category" name="category" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pages">Number of Pages:</label>
+                        <input type="number" id="pages" name="pages" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="publication-date">Publication Year:</label>
+                        <input type="text" id="publication-year" name="publication-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating:</label>
+                        <input type="number" id="rating" name="rating" step="0.1" min="0" max="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cover-image">Cover Image URL:</label>
+                        <input type="url" id="cover-image" name="cover-image" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" id="button-submit"  class="submit-button">Submit</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+

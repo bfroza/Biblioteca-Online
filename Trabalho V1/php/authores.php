@@ -13,10 +13,10 @@
             <div class="logo">BookBase</div>
             <nav>
                 <ul>
-                <li><a href="../php/index.php" class="active"><i class='bx bx-home-heart' id="icon"></i> Discover</a></li>
+                    <li><a href="../php/index.php" class="active"><i class='bx bx-home-heart' id="icon"></i> Discover</a></li>
                     <li><a href="../php/livro.php"><i class='bx bxs-book-bookmark' ></i> Books</a></li>
                     <li><a href="lista-livros.php"><i class='bx bx-library'></i> My Library</a></li>
-                    <li><a href="authores.php"><i class='bx bxs-edit'></i> Author</a></li>
+                    <li><a href="listar_autores.php"><i class='bx bxs-edit'></i> Author</a></li>
                     <li><a href="#"><i class='bx bx-category'></i> Category</a></li>
                     <li><a href="#"><i class='bx bx-download'></i> Download</a></li>
                     <li><a href="#"><i class='bx bx-headphone'></i> Audio Books</a></li>
@@ -32,80 +32,57 @@
             </div>
         </aside>
       
-        <div class="container-fluid">
-            <h1>Lista de Livros</h1>
+        <main class="container-fluid">
+            <h1>Lista de Authores</h1>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-md-12 pb-3">
-                                <input type="text" id="searchInput" placeholder="Pesquisar..." onkeyup="pesquisarLivros()">
-                                <button class="btn btn-primary" onclick="window.location.href='../php/livro.php'">
-                                    <i class="fa fa-plus"></i> Novo Livro
+                                <input type="text" id="searchInput" placeholder="Pesquisar..." onkeyup="pesquisarAutores()">
+                                <button class="btn btn-primary" onclick="window.location.href='../php/author.php'">
+                                    <i class="fa fa-plus"></i> Novo Autor
                                 </button>
                             </div>
                             <table class="table table-bordered table-hover" id="dados">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Título</th>
-                                        <th scope="col">Author</th>
-                                        <th scope="col">Categoria</th>
-                                        <th scope="col">Número de Páginas</th>
-                                        <th scope="col">Quantidade</th>
-                                        <th scope="col">Ano de Publicação</th>
-                                        <th scope="col">Nota</th>
-                                        <th scope="col">Imagem</th>
-                                        <th scope="col">Descrição</th>
+                                        <th scope="col">Autor</th>
+                                        <th scope="col">Biografia</th>
+                                        <th scope="col">Data de Nascimento</th>
+                                        <th scope="col">Nacionalidade</th>
                                         <th scope="col">Opções</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php include 'listar_livros.php'; ?>
+                                    <?php include 'listar_autores.php'; ?>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <form name="edita_livro">
-            <input type="hidden" name="id_livro" id="id_livro">
-            <input type="hidden" name="acao" id="acao" value="editar">
-        </form>
-
-        <form name="deleta_livro">
-            <input type="hidden" name="id_livro" id="deleta_livro">
-            <button type="button" onclick="deletarLivro(<?php echo $id_livro; ?>)">
-        <i class="fa fa-trash"></i> 
-</button>
-
-        </form>
+        </main>
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
     </div>
 </body>
 </html>
 
-
 <script>
-function pesquisarLivros() {
-    var input, filter, table, tr, i, txtValueTitle, txtValueAuthor;
+function pesquisarAutores() {
+    var input, filter, table, tr, i, txtValueAuthor;
     input = document.getElementById("searchInput");
     filter = input.value.toUpperCase(); 
     table = document.getElementById("dados");
     tr = table.getElementsByTagName("tr");
 
     for (i = 0; i < tr.length; i++) {
-        var tdTitle = tr[i].getElementsByTagName("td")[0];
         var tdAuthor = tr[i].getElementsByTagName("td")[1]; 
-        if (tdTitle || tdAuthor) {
-            txtValueTitle = tdTitle.textContent || tdTitle.innerText;
+        if (tdAuthor) {
             txtValueAuthor = tdAuthor.textContent || tdAuthor.innerText;
-            if (txtValueTitle.toUpperCase().indexOf(filter) > -1 || txtValueAuthor.toUpperCase().indexOf(filter) > -1) {
+            if (txtValueAuthor.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
@@ -114,12 +91,12 @@ function pesquisarLivros() {
     }
 }
 
-
 function editarLivro(id) {
     document.edita_livro.id_livro.value = id;
     document.edita_livro.submit();
 }
-function confirmarDelecao(id) {
+
+function confirmarDelecaoAutor(id) {
             Swal.fire({
                 title: 'Você tem certeza?',
                 text: "Você não poderá reverter isso!",
@@ -130,38 +107,42 @@ function confirmarDelecao(id) {
                 confirmButtonText: 'Sim, deletar!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    deletarLivro(id);
+                    deletarAutor(id);
                 }
             });
         }
 
-        function deletarLivro(id) {
-            const idLivro = id;
+        function deletarAutor(id) {
+            const idAutor = id;
             $.ajax({
-                url: 'http://localhost/Trabalho%20V1/php/delete_book.php',
+                url: 'http://localhost/Trabalho%20V1/php/delete-autor.php',
                 type: 'POST',
-                data: { idLivro: idLivro },
+                data: { idAutor: idAutor }, 
                 success: function(response) {
-                    Swal.fire(
-                        'Deletado!',
-                        'O livro foi deletado com sucesso.',
-                        'success'
-                    ).then(() => {
-                        location.reload();
-                    });
+                    const res = JSON.parse(response);
+                    if (res.status === 'success') {
+                        Swal.fire(
+                            'Deletado!',
+                            'O autor foi deletado com sucesso.',
+                            'success'
+                        ).then(() => {
+                            location.reload(); 
+                        });
+                    } else {
+                        Swal.fire(
+                            'Erro!',
+                            res.message,
+                            'error'
+                        );
+                    }
                 },
                 error: function(xhr, status, error) {
                     Swal.fire(
                         'Erro!',
-                        'Houve um problema ao deletar o livro.',
+                        'Houve um problema ao deletar o autor.',
                         'error'
                     );
                 }
             });
         }
-
-
-
 </script>
-
-

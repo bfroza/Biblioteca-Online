@@ -6,6 +6,8 @@
     width: 100%;
 }
 
+
+
 .form-section {
     width: 40%;
     background-color: #fff;
@@ -24,13 +26,24 @@
     display: block; 
     text-align: left; 
 }
-
+.sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #e5e9f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
 .form-section input[type="text"],
 .form-section input[type="number"],
 .form-section select,
-.form-section input[type="date"],
 .form-section input[type="url"],
-.form-section textarea{
+.form-section textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -71,4 +84,8 @@ main{
 }
 #author-container{
     margin: auto;
+}
+
+.form-section{
+    overflow-x: auto;
 }

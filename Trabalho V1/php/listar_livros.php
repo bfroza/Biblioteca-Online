@@ -1,5 +1,5 @@
 <?php
-// Conectar ao banco de dados
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -19,16 +19,16 @@ if ($result->num_rows > 0) {
         echo "<tr>";
         echo "<td>" . $row["titulo"] . "</td>";
         echo "<td>" . $row["autor_nome"] . "</td>";
-        echo "<td>" . $row["categoria"] . "</td>";
+        echo "<td>" . $row["categoria_nome"] . "</td>";
         echo "<td>" . $row["numeroPag"] . "</td>";
         echo "<td>" . $row["quantidade"] . "</td>";
         echo "<td>" . $row["anoPubli"] . "</td>";
         echo "<td>" . $row["nota"] . "</td>";
         echo "<td><img src='" . $row["imagem"] . "' alt='" . $row["titulo"] . "' width='50'></td>";
-        echo "<td>" . $row["descricao"] . "</td>";
+        echo "<td style='text-align: justify;'>" . $row["descricao"] . "</td>";
         echo "<td>
                 <i class='bx bxs-edit' style='color:#067500; cursor: pointer;' onclick='editarLivro(" . $row["livro_id"] . ")'></i>
-                <i class='bx bxs-trash' style='color:#d33; cursor: pointer;' onclick='deletarLivro(" . $row["livro_id"] . ")'></i>
+                <i class='bx bxs-trash' style='color:#d33; cursor: pointer;' onclick='confirmarDelecao(" . $row["livro_id"] . ")'></i>
               </td>";
         echo "</tr>";
     }

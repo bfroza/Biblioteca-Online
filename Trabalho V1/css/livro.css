@@ -26,19 +26,6 @@
     display: block; 
     text-align: left; 
 }
-.sidebar {
-    width: 240px;
-    background-color: #ffffff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-right: 1px solid #e5e9f0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-}
 .form-section input[type="text"],
 .form-section input[type="number"],
 .form-section select,
@@ -79,9 +66,7 @@ transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
 }
 
-main{
-    margin: auto;
-}
+
 #author-container{
     margin: auto;
 }

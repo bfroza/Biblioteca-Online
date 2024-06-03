@@ -10,11 +10,14 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-            <div class="logo">BookBase</div>
+            <div class="close-sidebar">
+                <i id="close" class='bx bxs-caret-left-circle' ></i>
+                </div>
+                <div class="logo">BookBase</div>
             <nav>
                 <ul>
                     <li><a href="../html/index.html" class="active"><i class='bx bx-home-heart' id="icon"></i> Discover</a></li>
-                    <li><a href="../php/livro.php"><i class='bx bxs-book-bookmark' ></i> Books</a></li>
+                    <li><a href="../html/livro.html"><i class='bx bxs-book-bookmark' ></i> Books</a></li>
                     <li><a href="#"><i class='bx bxs-edit'></i> Author</a></li>
                     <li><a href="#"><i class='bx bx-category'></i> Category</a></li>
                     <li><a href="#"><i class='bx bx-library'></i> My Library</a></li>
@@ -159,6 +162,23 @@
             <button class="read-now">Read Now <i class='bx bx-book-reader'></i></button>
         </aside>
     </div>
+
+    <script>
+        const sidebarToggle = document.getElementById('menu');
+        const sidebar = document.querySelector('.sidebar');
+
+        sidebarToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+        });
+
+        const closeSidebarButton = document.querySelector('.close-sidebar');
+
+
+        closeSidebarButton.addEventListener('click', function() {
+            sidebar.classList.remove('active');
+
+});
+    </script>
     <script>
        document.addEventListener("DOMContentLoaded", function() {
     const ratingElement = document.querySelector(".rating-value");

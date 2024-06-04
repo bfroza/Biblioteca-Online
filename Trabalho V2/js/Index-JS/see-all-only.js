@@ -9,5 +9,5 @@ function toggleBooksDisplay(event) {
         }
     });
 
-    seeAllButton.textContent = seeAllButton.textContent === 'See All >' ? 'See a Select Few' : 'See All >';
+    seeAllButton.textContent = seeAllButton.textContent === 'Veja todos >' ? 'Veja os melhores' : 'Veja todos >';
 }

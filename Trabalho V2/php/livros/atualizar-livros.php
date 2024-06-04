@@ -43,14 +43,13 @@
             <div class="logo">BookBase</div>
             <nav>
                 <ul>
-                    <li><a href="../index/index.php" class="active"><i class='bx bx-home-heart' id="icon"></i> Discover</a></li>
-                    <li><a href="../livros/livro.php"><i class='bx bxs-book-bookmark'></i> Books</a></li>
-                    <li><a href="../livros/lista-livros.php"><i class='bx bx-library'></i> My Library</a></li>
-                    <li><a href="../autor/authores.php"><i class='bx bxs-edit'></i> Author</a></li>
-                    <li><a href="#"><i class='bx bx-category'></i> Category</a></li>
-                    <li><a href="#"><i class='bx bx-download'></i> Download</a></li>
-                    <li><a href="#"><i class='bx bx-headphone'></i> Audio Books</a></li>
-                    <li><a href="#"><i class='bx bx-heart'></i> Favourite</a></li>
+                    <li><a href="../index/index.php" class="active"><i class='bx bx-home-heart' id="icon"></i> Descubra</a></li>
+                    <li><a href="../livros/lista-livros.php"><i class='bx bx-library'></i> Livraria</a></li>
+                    <li><a href="../autor/authores.php"><i class='bx bxs-edit'></i> Autores</a></li>
+                    <li class="disabled"><a href="#"><i class='bx bx-category'></i> Categorias</a></li>
+                    <li class="disabled"><a href="#"><i class='bx bx-heart'></i> Favoritos</a></li>
+                    <li class="disabled"><a href="#"><i class='bx bx-book-reader'></i> Livros Lidos</a></li>
+                    <li class="disabled"><a href="#"><i class='bx bx-download'></i> Download</a></li>       
                 </ul>
             </nav>
             <div class="sidebar-bottom">

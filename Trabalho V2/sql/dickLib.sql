@@ -62,6 +62,21 @@ JOIN autores_has_livros ON livros.id = autores_has_livros.livros_id
 JOIN autores ON autores.id = autores_has_livros.autores_id
 JOIN categorias ON livros.categoria_id = categorias.id;
 
+
+-- View Listar Autores
+CREATE VIEW autor_livros_count AS
+SELECT 
+  a.id AS autor_id,
+  a.nome AS autor,
+  a.biografia AS biografia,
+  a.dataNasc AS data_nascimento,
+  a.nacionalidade AS nacionalidade,
+  COUNT(l.id) AS total_livros
+FROM autores a
+LEFT JOIN autores_has_livros al ON a.id = al.autores_id
+LEFT JOIN livros l ON l.id = al.livros_id
+GROUP BY a.id ORDER BY autor;
+
 -- Inserir autores
 INSERT INTO autores (nome, biografia, dataNasc, nacionalidade) 
 VALUES 
@@ -74,7 +89,10 @@ VALUES
 ('J.R.R. Tolkien', 'John Ronald Reuel Tolkien foi um escritor, poeta, filólogo e professor universitário britânico.', '1892-01-03', 'Reino Unido'),
 ('Dan Brown', 'Dan Brown é um escritor norte-americano, mais conhecido por seus romances de suspense.', '1964-06-22', 'Estados Unidos'),
 ('Markus Zusak', 'Markus Zusak é um escritor australiano, conhecido por seu romance "A Menina que Roubava Livros".', '1975-06-23', 'Austrália'),
-('Jane Austen', 'Jane Austen foi uma escritora inglesa, conhecida por seus romances clássicos como "Orgulho e Preconceito".', '1775-12-16', 'Reino Unido');
+('Jane Austen', 'Jane Austen foi uma escritora inglesa, conhecida por seus romances clássicos como "Orgulho e Preconceito".', '1775-12-16', 'Reino Unido'),
+('Neil Gaiman', 'Neil Richard MacKinnon Gaiman é um escritor inglês de romances, contos, graphic novels, quadrinhos e cinema.', '1960-11-10', 'Reino Unido'),
+('Haruki Murakami', 'Haruki Murakami é um escritor japonês conhecido por seus romances surrealistas e realistas mágicos.', '1949-01-12', 'Japão'),
+('Margaret Atwood', 'Margaret Eleanor Atwood é uma escritora canadense, autora de poesia, ficção e crítica literária.', '1939-11-18', 'Canadá');
 
 -- Inserir categorias
 INSERT INTO categorias (nome, descricao) 
@@ -84,7 +102,8 @@ VALUES
 ('Ficção Científica', 'Gênero literário baseado em avanços científicos e tecnológicos.'),
 ('Mistério', 'Gênero literário centrado em resolver um crime ou descobrir segredos.'),
 ('Horror', 'Gênero literário destinado a provocar medo e suspense.'),
-('Romance', 'Gênero literário que foca nas relações amorosas.');
+('Romance', 'Gênero literário que foca nas relações amorosas.'),
+('Aventura', 'Gênero literário que envolve aventuras emocionantes e experiências perigosas.');
 
 -- Inserir mais livros
 INSERT INTO livros (titulo, categoria_id, numeroPag, quantidade, anoPubli, nota, imagem, descricao) 
@@ -107,7 +126,11 @@ VALUES
 ('A Revolução dos Bichos', 1, '152', 95, 1945, 4.7, 'https://m.media-amazon.com/images/I/91BsZhxCRjL._AC_UF1000,1000_QL80_.jpg', 'Sátira política de George Orwell que narra a rebelião dos animais de uma fazenda contra seus donos humanos e as subsequentes lutas pelo poder.'),
 ('Morte na Mesopotâmia', 4, '288', 85, 1936, 4.6, 'https://m.media-amazon.com/images/I/81KmIm6Z4uL._AC_UF1000,1000_QL80_.jpg', 'Romance policial de Agatha Christie onde Hercule Poirot investiga um assassinato durante uma expedição arqueológica no Oriente Médio.'),
 ('A Coragem de ser Imperfeito', 6, '256', 100, 2010, 4.8, 'https://m.media-amazon.com/images/I/61rRRbfINJL._AC_UF1000,1000_QL80_.jpg', 'Livro de autoajuda de Brené Brown que explora a importância da vulnerabilidade e da autenticidade na vida pessoal e profissional.'),
-('A Sutil Arte de Ligar o F*da-se', 6, '224', 90, 2016, 4.6, 'https://m.media-amazon.com/images/I/6175IU0qFgL._AC_UF1000,1000_QL80_.jpg', 'Livro de autoajuda de Mark Manson que propõe uma abordagem inconvencional para alcançar a felicidade e o sucesso através do desapego das expectativas e da aceitação da adversidade.');
+('A Sutil Arte de Ligar o F*da-se', 6, '224', 90, 2016, 4.6, 'https://m.media-amazon.com/images/I/6175IU0qFgL._AC_UF1000,1000_QL80_.jpg', 'Livro de autoajuda de Mark Manson que propõe uma abordagem inconvencional para alcançar a felicidade e o sucesso através do desapego das expectativas e da aceitação da adversidade.'),
+('Neverwhere', 7, '370', 50, 1996, 4.5, 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRSYkynwzGPmglplm1PZ4Y_hlMr3VIqiVKCU-U6KRLojaUFbm0ILKNiDwsLi5ccorYwszD5JrzKvDnnJlq5aYN2cTf2za84XM4IC_OgrpY43biwsmjn2znroA&usqp=CAE', 'Uma fantasia urbana de Neil Gaiman, onde um jovem londrino comum é arrastado para uma existência mágica e misteriosa abaixo das ruas de Londres.'),
+('Norwegian Wood', 7, '296', 55, 1987, 4.4, 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQqA02KVRLTmppMlj76A-h7WxeJwYYJQc9xBrSPBF5EuM50BVuk6BIZXRzw6oBC7144KtfgY5FPETAkHCNfEw2wEhSA_2Lu7kO8X4wUfEM&usqp=CAE', 'Um romance de Haruki Murakami que combina aventura emocional e introspecção enquanto um jovem navega pelos desafios do amor e da perda.'),
+('Oryx and Crake', 7, '378', 45, 2003, 4.3, 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcThaHx5oeT4wG9ibUgnfrg4hXQTBpgyyDhdjoNFFebnCeuleWH89z6HLVZM_lEorY0FQk2ms7F7S6TtAF77S1hjfqKwyBqOBPsshUKwh9M&usqp=CAE', 'Um livro de Margaret Atwood que combina aventura e ficção científica em um futuro distópico, explorando temas de genética e sobrevivência.');
+
 
 -- Relacionar autores com livros (continuação)
 INSERT INTO autores_has_livros (autores_id, livros_id) 
@@ -117,10 +140,10 @@ VALUES
 (2, 3),
 (3, 4),
 (4, 5),
-(5, 6),
+(6, 6),
 (5, 7),
 (7, 8),
-(6, 9),
+(8, 9),
 (8, 10),
 (9, 11),
 (5, 12),
@@ -130,5 +153,8 @@ VALUES
 (2, 16),
 (3, 17),
 (8, 18),
-(9, 19);
+(9, 19),
+(11,20),
+(12,21),
+(12,22);
 

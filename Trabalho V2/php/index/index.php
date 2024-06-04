@@ -25,14 +25,13 @@
             <div class="logo">BookBase</div>
             <nav>
                 <ul>
-                    <li><a href="../index/index.php" class="active"><i class='bx bx-home-heart' id="icon"></i> Discover</a></li>
-                    <li><a href="../livros/livro.php"><i class='bx bxs-book-bookmark' ></i> Books</a></li>
-                    <li><a href="../livros/lista-livros.php"><i class='bx bx-library'></i> My Library</a></li>
-                    <li><a href="../autor/authores.php"><i class='bx bxs-edit'></i> Author</a></li>
-                    <li><a href="#"><i class='bx bx-category'></i> Category</a></li>
-                    <li><a href="#"><i class='bx bx-download'></i> Download</a></li>
-                    <li><a href="#"><i class='bx bx-headphone'></i> Audio Books</a></li>
-                    <li><a href="#"><i class='bx bx-heart'></i> Favourite</a></li>
+                    <li><a href="../index/index.php" class="active"><i class='bx bx-home-heart' id="icon"></i> Descubra</a></li>
+                    <li><a href="../livros/lista-livros.php"><i class='bx bx-library'></i> Livraria</a></li>
+                    <li><a href="../autor/authores.php"><i class='bx bxs-edit'></i> Autores</a></li>
+                    <li class="disabled"><a href="#"><i class='bx bx-category'></i> Categorias</a></li>
+                    <li class="disabled"><a href="#"><i class='bx bx-heart'></i> Favoritos</a></li>
+                    <li class="disabled"><a href="#"><i class='bx bx-book-reader'></i> Livros Lidos</a></li>
+                    <li class="disabled"><a href="#"><i class='bx bx-download'></i> Download</a></li>       
                 </ul>
             </nav>
             <div class="sidebar-bottom">
@@ -49,15 +48,15 @@
                     <i id="menu" class="bx bx-menu" id="sidebar-toggle"></i>
                     <i class='bx bx-search'></i>
                     <input type="text" id="input_search" onkeyup="pesquisarLivros()"
-                        placeholder="Search your favourite books">
+                        placeholder="Pesquise seus livros favoritos">
                 </div>
                 <div class="user-profile">
                     <img src="https://via.placeholder.com/40" alt="User Avatar">
-                    <span>Your Name</span>
+                    <span>Seu nome</span>
                 </div>
             </header>
             <section class="recommended">
-                <h2>Recommended <a href="#" class="see-all" onclick="toggleBooksDisplay(event)">See All ></a></h2>
+                <h2>Recomendados <a href="#" class="see-all" onclick="toggleBooksDisplay(event)">Veja todos ></a></h2>
                 <div class="book-list">
                     <?php
                     include_once "../conexao/conexao.php";
@@ -90,14 +89,14 @@
                 </div>
             </section>
             <section class="categories">
-                <h2>Categories</h2>
+                <h2>Categorias</h2>
                 <div class="category-list">
                     <?php
-                    $sql_categories = "SELECT * FROM categorias";
+                    $sql_categories = "SELECT * FROM categorias ORDER BY nome";
                     $result_categories = mysqli_query($conexao, $sql_categories);
 
                     if (mysqli_num_rows($result_categories) > 0) {
-                        echo '<button class="category active" data-category="all" onclick="filterBooksByCategory(this)">All</button>';
+                        echo '<button class="category active" data-category="all" onclick="filterBooksByCategory(this)">Todos</button>';
                         while ($row_cat = mysqli_fetch_assoc($result_categories)) {
                             echo '<button class="category" data-category="' . $row_cat["id"] . '" onclick="filterBooksByCategory(this)">' . $row_cat["nome"] . '</button>';
                         }
@@ -155,11 +154,11 @@
             <p class="details">
             <div class="detail-item">
                 <span id="book-pages">416</span>
-                <span>Pages</span>
+                <span>Páginas</span>
             </div>
             <div class="detail-item">
                 <span id="book-ratings">45</span>
-                <span>Ratings</span>
+                <span>Classificações</span>
             </div>
             <div class="detail-item">
                 <span id="book-reviews">434</span>
@@ -172,7 +171,7 @@
                 oportunidade sobre a terra” e apresenta o maravilhoso universo da fictícia Macondo, onde se passa o
                 romance.
             </p>
-            <button class="read-now">Read Now <i class='bx bx-book-reader'></i></button>
+            <button class="read-now">Leia agora <i class='bx bx-book-reader'></i></button>
         </aside>
     </div>
 

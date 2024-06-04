@@ -11,7 +11,7 @@ function handleBookClick(bookId) {
 function fetchBookInfo(bookId) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest
-        xhr.open('GET', 'http://localhost/Trabalho%20V1/php/livros/get-livro.php?id=' + bookId, true);
+        xhr.open('GET', 'http://localhost/Trabalho%20V2/php/livros/get-livro.php?id=' + bookId, true);
 
         xhr.onload = function () {
             if (xhr.status === 200) {

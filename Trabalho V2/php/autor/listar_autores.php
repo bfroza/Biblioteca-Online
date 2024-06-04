@@ -2,19 +2,21 @@
 
 include '../conexao/conexao.php';
 
-$sql = "SELECT * FROM autores";
+$sql = "SELECT * FROM autor_livros_count";
 $result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
-        echo "<td>" . $row["nome"] . "</td>";
+        echo "<td>" . $row["autor"] . "</td>";
         echo "<td style='text-align: justify;'>" . $row["biografia"] . "</td>";
-        echo "<td>" . $row["dataNasc"] . "</td>";
+        $dataNasc = DateTime::createFromFormat('Y-m-d', $row["data_nascimento"]);
+        echo "<td>" . $dataNasc->format('d/m/Y') . "</td>";
         echo "<td>" . $row["nacionalidade"] . "</td>";
+        echo "<td>" . $row["total_livros"] . "</td>";
         echo "<td>
-                <i class='bx bxs-edit' style='color:#067500; cursor: pointer;' onclick='editarAutor(" . $row["id"] . ")'></i>
-                <i class='bx bxs-trash' style='color:#d33; cursor: pointer;' onclick='confirmarDelecaoAutor(" . $row["id"] . ")'></i>
+                <i class='bx bxs-edit' style='color:#067500; cursor: pointer;' onclick='editarAutor(" . $row["autor_id"] . ")'></i>
+                <i class='bx bxs-trash' style='color:#d33; cursor: pointer;' onclick='confirmarDelecaoAutor(" . $row["autor_id"] . ")'></i>
               </td>";
         echo "</tr>";
     }

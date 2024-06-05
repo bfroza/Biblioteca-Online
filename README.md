@@ -1,1 +1,6 @@
 # Biblioteca-Online
+Trabalho feito por Bruno Froza, João Vitor Longo e Marcio Lima,  sobre uma biblioteca virtual de venda de livros chamada BookBase.
+Na página inicial, esta presente os livros recomendados, com uma barra de pesquisa para o usuário pode pesquisar pelo livro que deseja, ao clicar em um livro, ira ser aberto uma aba no lado direito, com informações presentes sobre o mesmo, desde o nome do livro, de seu autor, sua avaliação, sendo baseada em um valo que vai de 0 a 5 estrelas, o núm,ero de páginas, o número de análises, sua descrição e a opção para ler o livro.
+Na parte inferior da página o ussuário poderá escolher a categoria de livros que deseja ler.
+No canto esquerdo está presente o menu, com a página inicial, a página para cadastrar livros, os autores, as categorias de livros, a livraria com os livros que o usuário estaria lendo, os downloads feito pelo usuário, livros em audio, os favoritos do usuário, as configuraç~eos da página, o suporte, e o logout.
+Na página de de cadastra livros, tem as opções para completar o cadastro, tenco que colocar o nome do livro, seu autor, a categoria, número de páginas, o total de livros presentes para venmda na biblioteca da loja, o ano de publicação, a avaliação total, o URL para a capa do livro, e a descrição dele.

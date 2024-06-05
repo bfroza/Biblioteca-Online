@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Mulish-SemiBold';
+    src: url('../fonts/mulish/Mulish-SemiBold.ttf');
+}
+
+@media print {
+    @page {
+        size: 270mm 350mm;
+    }
+    .esconde {
+        display: none;
+    }
+    .btn {
+        display: none;
+    }
+    nav,
+    .navbar-nav {
+        display: none;
+    }
+}
+
+* {
+    font-family: 'Mulish-SemiBold', sans-serif;
+}
+
+body {
+    background-color: #f8f9fc;
+}
+
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+
+.login-logo {
+    display: block;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.sidenav-azul {
+    background-image: linear-gradient(#146C94, #3f3f42);
+    background-size: cover;
+}
+
+.sidenav-azul .sb-sidenav-menu-heading {
+    color: #000;
+}
+
+.sidenav-azul .sb-sidenav-menu .nav .nav-link {
+    color: #f3f3f3bf;
+}
+
+.sidenav-azul .sb-sidenav-menu .nav .nav-link:hover {
+    color: #fff;
+}
+
+.sidenav-azul .sb-sidenav-footer {
+    background-color: #22275c;
+    color: #fff;
+}
+
+.navbar-azul {
+    background-color: #9BA4B5;
+    color: #fff;
+}
+
+.navbar-azul .nav-link,
+.navbar-brand {
+    color: #fff;
+}
+
+#sidebarToggle {
+    color: #fff;
+}
+
+.form-cadastro {
+    background-color: #d4d4d4;
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.buttons-cadastro {
+    margin: 15px;
+    padding: 15px;
+}
+
+.titulo-modulo {
+    font-weight: bold;
+    color: rgb(16, 70, 114);
+}
+
+.btn-circle {
+    border-radius: 100%;
+    height: 1.9rem;
+    width: 1.9rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

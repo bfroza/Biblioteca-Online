@@ -1,0 +1,9 @@
+.listagem-produtos{
+    background-color: #000000;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+.listagem-produtos h2{
+    color: black;
+}

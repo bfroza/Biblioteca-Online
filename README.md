@@ -55,7 +55,7 @@ BookBase é uma biblioteca virtual de venda de livros desenvolvida por Bruno Fro
    - Navegue até a pasta `Trabalho V3 -> php -> index`, ou digite `http://localhost/Trabalho%20V3/php/index/` na barra de pesquisa do seu navegador.
 
 8. **Testes Unitários:**
-   - Vá para a pasta raiz do trabalho através do terminal do VSCODE, ou seja, `C:\xampp\htdocs\Trabalho V3>` e digite ```bash ./vendor/bin/phpunit tests ```
+   - Vá para a pasta raiz do trabalho através do terminal do VSCODE, ou seja, `C:\xampp\htdocs\Trabalho V3>` e digite ``` ./vendor/bin/phpunit tests ```
 
 Agora você pode usar o projeto conforme necessário, seguindo essas etapas.
 

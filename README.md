@@ -1,6 +1,6 @@
 # BookBase - Biblioteca Online
 
-BookBase é uma biblioteca virtual de venda de livros desenvolvida por Bruno Froza, João Vitor Longo e Márcio Lima. Este projeto é uma plataforma onde os usuários podem encontrar e comprar uma variedade de livros online.
+BookBase é uma biblioteca virtual de venda de livros desenvolvida por Bruno Froza, João Vitor Longo e Marcio Lima. Este projeto é uma plataforma onde os usuários podem encontrar e comprar uma variedade de livros online.
 
 ## Funcionalidades
 

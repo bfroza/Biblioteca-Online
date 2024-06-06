@@ -1,6 +1,6 @@
 # BookBase - Biblioteca Online
 
-BookBase é uma biblioteca virtual de venda de livros desenvolvida por Bruno Froza, João Vitor Longo e Marcio Lima. Este projeto é uma plataforma onde os usuários podem encontrar e comprar uma variedade de livros online.
+BookBase é uma biblioteca virtual de locação de livros desenvolvida por Bruno Froza, João Vitor Longo e Marcio Lima. Este projeto é uma plataforma onde os usuários podem encontrar e tomar emprestada uma variedade de livros online.
 
 ## Funcionalidades
 
@@ -16,7 +16,7 @@ BookBase é uma biblioteca virtual de venda de livros desenvolvida por Bruno Fro
 
 ## Funcionalidades a Adicionar
 
-- **Downloads:** Permite aos usuários baixarem os livros adquiridos para leitura offline.
+- **Downloads:** Permite aos usuários baixarem os livros emprestados para leitura offline.
 
 - **Favoritos:** Permite aos usuários salvar seus livros favoritos para acesso rápido e fácil.
 
@@ -41,7 +41,7 @@ BookBase é uma biblioteca virtual de venda de livros desenvolvida por Bruno Fro
    - Após a extração, exclua o arquivo ZIP e mantenha apenas a pasta `vendor`.
 
 4. **Configuração do Banco de Dados:**
-   - Vá para a pasta `sql` do e copie o código SQL.
+   - Vá para a pasta `sql` do VSCODE e copie o código SQL.
 
 5. **Iniciar o Xampp:**
    - Abra o Xampp e inicie os serviços Apache e MySQL.
@@ -57,7 +57,7 @@ BookBase é uma biblioteca virtual de venda de livros desenvolvida por Bruno Fro
 8. **Testes Unitários:**
    - Vá para a pasta raiz do trabalho através do terminal do VSCODE, ou seja, `C:\xampp\htdocs\Trabalho V3>` e digite ``` ./vendor/bin/phpunit tests ```
 
-Agora você pode usar o projeto conforme necessário, seguindo essas etapas.
+Agora você pode usar o projeto conforme necessário.
 
 
 

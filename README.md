@@ -1,6 +1,6 @@
 # BookBase - Biblioteca Online
 
-BookBase é uma biblioteca virtual de locação de livros desenvolvida por Bruno Froza, João Vitor Longo e Marcio Lima. Este projeto é uma plataforma onde os usuários podem encontrar e tomar emprestada uma variedade de livros online.
+BookBase é uma biblioteca virtual de locação de livros desenvolvida por Bruno Froza, João Vitor Longo e Marcio Lima. Este projeto é uma plataforma onde os usuários podem encontrar e tomar emprestados livros online.
 
 ## Funcionalidades
 
